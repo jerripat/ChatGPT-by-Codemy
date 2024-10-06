@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block content  %}
+
+
+
+<div class="card">
+  <div class="card-header">
+   ChatGPT Response
+ </div>
+  <div class="card-body">
+   <br /><br />
+  </div>
+</div>
+
+<br/><br/>
+<form method=POST action="{% url 'home' %}">
+  {% csrf_token %}
+  <div class="mb-3">
+  <input type="text" class="form-control" name="question" placeholder="Ask ChatGPT a question!">
+    <br/>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+</form>
+
+  {% endblock %}
+
+
